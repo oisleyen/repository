@@ -24,5 +24,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public void addEmployee(Employee emp) {
 		em.persist(emp);		
 	}
+
+	@Override
+	public void removeEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		
+	}
  
 }
