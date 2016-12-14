@@ -3,6 +3,8 @@
  */
 package com.oguzhan.shuttle.mgmt.ejb.services;
 
+import java.util.List;
+
 import com.oguzhan.shuttle.mgmt.jpa.entities.Shuttle;
 
 /**

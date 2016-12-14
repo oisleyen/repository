@@ -17,7 +17,7 @@ import com.oguzhan.shuttle.mgmt.jpa.entities.Employee;
 @Stateless
 public class EmployeeServiceImpl implements EmployeeService {
  
-	@PersistenceContext(name = "EmployeeApp")
+	@PersistenceContext(name = "ShuttleMgmtApp")
 	private EntityManager em;
  
 	@Override
@@ -27,14 +27,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public void removeEmployee(Employee emp) {
-		// TODO Auto-generated method stub
-		
+		em.remove(emp);
 	}
 	
 	@Override
 	public void updateEmployee(Employee emp) {
-		// TODO Auto-generated method stub
-		
+		//TODO
 	}
  
 }

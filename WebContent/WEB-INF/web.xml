@@ -15,6 +15,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>facesServlet</servlet-name>
-    <url-pattern>home.xhtml</url-pattern>
+    <url-pattern>*.xhtml</url-pattern>
   </servlet-mapping>
 </web-app>

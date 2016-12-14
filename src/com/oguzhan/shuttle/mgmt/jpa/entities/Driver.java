@@ -3,51 +3,37 @@
  */
 package com.oguzhan.shuttle.mgmt.jpa.entities;
 
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.TableGenerator;
+
 /**
  * @author oisleyen
  *
  */
+@Entity
 public class Driver {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int driverId;
 	
+	@Column(name = "first_name")
 	private String firstName;
 	
+	@Column(name = "last_name")
 	private String lastName;
 	
-	private Shuttle shuttle;
+	@ManyToMany(mappedBy="drivers")
+	@Column(name = "shuttle")
+	private List<Shuttle> shuttles;
 
-	public int getDriverId() {
-		return driverId;
-	}
-
-	public void setDriverId(int driverId) {
-		this.driverId = driverId;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public Shuttle getShuttle() {
-		return shuttle;
-	}
-
-	public void setShuttle(Shuttle shuttle) {
-		this.shuttle = shuttle;
-	}
-	
-	
 }
