@@ -17,4 +17,6 @@ public interface ShuttleService {
 	
 	public void updateShuttle(Shuttle sh);
 
+	public List<Shuttle> getShuttles();
+
 }

@@ -10,5 +10,7 @@ import com.oguzhan.shuttle.mgmt.ejb.services.ShuttleService;
  *
  */
 public class ShuttleServiceImpl implements ShuttleService {
-
+	
+	@PersistenceContext(name = "ShuttleApp")
+	private EntityManager em;
 }
