@@ -30,5 +30,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	@Override
+	public void updateEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		
+	}
  
 }
